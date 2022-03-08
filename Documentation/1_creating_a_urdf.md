@@ -8,8 +8,8 @@ Unfortunately for us, Unity cant read XACROs so we will have to assemble our rob
 
 **Table of Contents**
   - [Requirements](#reqs)
-  - [Create a New Project](#step-1)
-  - [Download the Perception, the URDF and the TCP connector Packages](#step-2)
+  - [Putting the files in the correct place](#step-1)
+  - [Edit the XACRO](#step-2)
   - [Set Up the Ground Truth Renderer Feature](#step-3)
   - [Set Up the Scene](#step-4)
 
@@ -29,27 +29,28 @@ This repository contains the files for all the Robotiq products.
 ```bash
 git clone --recurse-submodules https://github.com/ros-industrial/robotiq
 ```
+This repository contains the files for all a custom XACRO to combine UR and Robotiq products.
+```bash
+git clone --recurse-submodules https://github.com/cambel/ur3
+```
 
 
 
 
+### <a name="step-1">Putting the files in the correct place</a>
+This next step will require you to have ROS installed and a workspace created.  You can go [here](Documentation/0_ROS_setup.md) if you havent done it yet.
 
-### <a name="step-1">Create a New Project</a>
-When you first run Unity, you will be asked to open an existing project, or create a new one.
-
-1. Open Unity and create a new project using the **Universal Render Pipeline**. Name your new project _**Pose Estimation Tutorial**_, and specify a desired location as shown below.
+1. Navigate to the /catkin_ws/src/ directory. You will need 3 things moved here.
+2. Move the ur_description file located in the universal_robot git you cloned previously.
+3. Move the robotiq_description file located in the robotiq git you cloned previously.
+4. Move the ur3_description/urdf/ur3_robotiq85_gripper.urdf.xacro file located in the cambel/ur3 git you cloned previously.
 
 <p align="center">
 <img src="Images/1_create_new_project.png" align="center" width=950/>
 </p>
 
-2. Go to **Edit > Project Settings** to open the `Project Settings` window. Change the **Physics > Solver Type** to `Temporal Gauss Seidel`.
 
-<p align="center">
-<img src="Images/1_set_solver_type.png" align="center" width=800/>
-</p>
-
-### <a name="step-2">Download the Perception, the URDF and the TCP connector Packages</a>
+### <a name="step-2">Edit the XACRO</a>
 
 Once your new project is created and loaded, you will be presented with the Unity Editor interface. From this point on, whenever we refer to the "editor", we mean the Unity Editor.
 
