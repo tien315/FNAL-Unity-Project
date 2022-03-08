@@ -20,6 +20,7 @@ Unfortunately for us, Unity cant read XACROs so we will have to assemble our rob
 To follow this tutorial you need to **clone** the following repositories. They contain the XACROs as well as the visual and collision meshes we will need to assemble our robot.
 
 1. Open a terminal and navigate to the folder where you want to host the repository.
+
 This repository contains the files for all the Universal-Robots products.
 ```bash
 git clone --recurse-submodules https://github.com/ros-industrial/universal_robot
