@@ -23,7 +23,7 @@ This tutorial is built upon the work done by Unity Technologies for their Roboti
 
 ---
 
-### <a name="link-part-1">[Part 1: Creating a URDF](Documentation/01_creating_a_urdf.md)</a>
+### <a name="link-part-1">[Part 1: Creating a URDF](Documentation/1_creating_a_urdf.md)</a>
 
 <img src="Documentation/Images/0_scene.png" width=400 />
 
