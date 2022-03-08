@@ -38,7 +38,7 @@ git clone --recurse-submodules https://github.com/cambel/ur3
 
 
 ### <a name="step-1">Putting the files in the correct place</a>
-This next step will require you to have ROS installed and a workspace created.  You can go [here](Documentation/0_ROS_setup.md) if you havent done it yet.
+This next step will require you to have ROS installed and a workspace created.  You can go [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment) if you havent done it yet.
 
 1. Navigate to the /catkin_ws/src/ directory. You will need 3 things moved here.
 2. Move the ur_description file located in the universal_robot git you cloned previously.
@@ -48,6 +48,8 @@ This next step will require you to have ROS installed and a workspace created.  
 <p align="center">
 <img src="Images/1_create_new_project.png" align="center" width=950/>
 </p>
+
+
 
 
 ### <a name="step-2">Edit the XACRO</a>
