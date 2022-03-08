@@ -27,9 +27,6 @@ This tutorial is built upon the work done by Unity Technologies for their Roboti
 
 <img src="Documentation/Images/0_scene.png" width=400 />
 
-
-This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot. We will import the [UR3 robot arm](https://www.universal-robots.com/products/ur3-robot) using the [URDF Importer](https://github.com/Unity-Technologies/URDF-Importer) package.
-
 ---
 
 ### <a name="link-part-2">[Part 2: Setup the Scene for Data Collection](Documentation/2_set_up_the_data_collection_scene.md)</a>
