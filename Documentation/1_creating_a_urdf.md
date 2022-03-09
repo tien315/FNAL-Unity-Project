@@ -34,19 +34,16 @@ This repository contains the files for all a custom XACRO to combine UR and Robo
 git clone --recurse-submodules https://github.com/cambel/ur3
 ```
 
-
-
-
 ### <a name="step-1">Putting the files in the correct place</a>
 This next step will require you to have ROS installed and a workspace created.  You can go [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment) if you havent done it yet.
 
 1. Navigate to the /catkin_ws/src/ directory. You will need 3 things moved here.
-2. Move the ur_description file located in the universal_robot git you cloned previously.
-3. Move the robotiq_description file located in the robotiq git you cloned previously.
+2. Move the universal_robot git you cloned previously.
+3. Move the robotiq git you cloned previously.
 4. Move the ur3_description/urdf/ur3_robotiq85_gripper.urdf.xacro file located in the cambel/ur3 git you cloned previously.
 
 <p align="center">
-<img src="Images/1_create_new_project.png" align="center" width=950/>
+<img src="linux_screencap.png" align="center" width=950/>
 </p>
 
 
