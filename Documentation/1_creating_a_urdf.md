@@ -34,6 +34,9 @@ This repository contains the files for all a custom XACRO to combine UR and Robo
 git clone --recurse-submodules https://github.com/cambel/ur3
 ```
 
+
+
+
 ### <a name="step-1">Putting the files in the correct place</a>
 This next step will require you to have ROS installed and a workspace created.  You can go [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment) if you havent done it yet.
 
@@ -51,37 +54,14 @@ This next step will require you to have ROS installed and a workspace created.  
 
 ### <a name="step-2">Edit the XACRO</a>
 
-Once your new project is created and loaded, you will be presented with the Unity Editor interface. From this point on, whenever we refer to the "editor", we mean the Unity Editor.
-
-#### How to install packages
-We will need to download and install several packages. In general, packages can be installed in Unity with the following steps:
-
-- From the top menu bar, open _**Window**_ -> _**Package Manager**_. As the name suggests, the _**Package Manager**_ is where you can download new packages, update or remove existing ones, and access a variety of information and additional actions for each package.
-
-- Click on the _**+**_ sign at the top-left corner of the _**Package Manager**_ window and then choose the option _**Add package from git URL...**_.
-
-- Enter the package address and click _**Add**_.
-
-It can take a few minutes for the manager to download and import packages.
+Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. Comments are written enclosed by "<!-- your comment here -->"
 
 <p align="center">
-<img src="Gifs/1_package_imports_short.gif"/>
+<img src="xacro_screencap.png"/>
 </p>
 
 
-#### Install Dependencies
-Install the following packages with the provided git URLs:
 
-1. [Perception package](https://github.com/Unity-Technologies/com.unity.perception) - `com.unity.perception@0.8.0-preview.3`
-    * This will help us collect training data for our machine learning model.
-
-2. [URDF Importer package](https://github.com/Unity-Technologies/URDF-Importer) - `https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.2.0-light`
-    * This package will help us import a robot into our scene from a file in the [Unified Robot Description Format (URDF)](http://wiki.ros.org/urdf).
-
-3. [TCP Connector package](https://github.com/Unity-Technologies/ROS-TCP-Connector) - `https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector#v0.2.0-light`
-    * This package will enable a connection between ROS and Unity.
-
->Note: If you encounter a Package Manager issue, check the [Troubleshooting Guide](troubleshooting.md) for potential solutions.
 
 ### <a name="step-3">Set Up Ground Truth Renderer Feature</a>
 
