@@ -54,7 +54,7 @@ This next step will require you to have ROS installed and a workspace created.  
 
 ### <a name="step-2">Edit the XACRO</a>
 
-Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. Comments are written enclosed by "<!-- your comment here -->"
+Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. First we will change the comments to reflect the changes we are making. Any references to ur3 or ur5 should be changed to ur3e. Next, on line 5, there is a reference to ur_description. We need to change it to ur_e_decription to access the files for the e-Series of robots. Similarly, the ur3.urdf.xacro filename at the end of line 5 should be changed to ur3e.urdf.xacro. Continue to change all references to match our equipment including references to the gripper and you should have something that looks like this:
 
 <p align="center">
 <img src="xacro_screencap.png"/>
