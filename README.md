@@ -25,7 +25,7 @@ This tutorial is built upon the work done by Unity Technologies for their Roboti
 
 ### <a name="link-part-1">[Part 1: Creating a URDF](Documentation/1_creating_a_urdf.md)</a>
 
-<img src="Documentation/Images/0_scene.png" width=400 />
+<img src="Documentation/urdf_img.png" width=400 />
 ---
 
 This part is about setting up a URDF or Universal Robot Description File that we can import into our simulation.
