@@ -36,7 +36,7 @@ This part is about setting up a URDF or Universal Robot Description File that we
 
 <img src="Documentation/Images/0_scene.png" width=400/>
 
-This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot. We will import the [UR3 robot arm](https://www.universal-robots.com/products/ur3-robot) using the [URDF Importer](https://github.com/Unity-Technologies/URDF-Importer) package.
+This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot. We will import the URDF we created in step 1 using the [URDF Importer](https://github.com/Unity-Technologies/URDF-Importer) package.
 
 ---
 
