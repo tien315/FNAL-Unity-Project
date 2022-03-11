@@ -2,6 +2,7 @@ MIE Senior Design Team 41
 
 University of Illinois at Chicago
 
+---
 
 Alan Tieng [atieng3@uic.edu](mailto:atieng3@uic.edu)
 
