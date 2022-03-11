@@ -11,7 +11,8 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 **Table of Contents**
 
 - [Part 1: Creating a URDF](#link-part-1)
-- [Part 2: Setting up a scene in Unity for data collection](#link-part-2)
+- [Part 2: Create a Unity scene with an imported URDF](#link-part-2)
+- [Part 3: Setting up a scene in Unity for data collection](#link-part-2)
 - [Part 3: Creating Randomizers](#link-part-3)
 - [Part 4: TrajectoryPlanner.cs and how it works](#link-part-4)
 - [Part 5: ROS Files and Basics](#link-part-5)
@@ -31,17 +32,24 @@ This part is about setting up a URDF or Universal Robot Description File that we
 
 ---
 
-### <a name="link-part-2">[Part 2: Setup the Scene in Unity](Documentation/2_set_up_the_scene.md)</a>
+### <a name="link-part-2">[Part 2: Create a Unity scene with an imported URDF](Documentation/2_set_up_the_scene.md)</a>
 
 <img src="Documentation/Images/0_scene.png" width=400/>
 
-This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data.
+This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot. We will import the [UR3 robot arm](https://www.universal-robots.com/products/ur3-robot) using the [URDF Importer](https://github.com/Unity-Technologies/URDF-Importer) package.
+
+---
+
+### <a name="link-part-3">[Part 3: Setup the Scene for Data Collection](Documentation/3_set_up_the_data_collection_scene.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
 
 If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
 
 ---
-
-### <a name="link-part-3">[Part 3: Data Collection and Model Training](Documentation/3_data_collection_model_training.md)</a>
+### <a name="link-part-4">[Part 4: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
 
 <img src="Documentation/Images/0_json_environment.png" width=400/>
 
