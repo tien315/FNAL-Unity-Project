@@ -140,7 +140,7 @@ git clone --recurse-submodules https://github.com/tien315/FNAL-Unity-Assets
 It should contain the following subfolders: `Materials`, `Prefabs`, `RosMessages`, `Scripts`, `URDFs`.
 
 5. Drag and Drop the `FNAL-Unity-Assets` folder from your operating system's file explorer onto the `Assets` folder in the _**Project**_ tab of the editor.
-6. Delete any other files in the Assets folder or you will receive errors of duplicate scripts in the directory when running the simulation.
+6. Delete Scripts folder in the _**Project**_ tab or you will receive errors of duplicate scripts when running the simulation.
 
 Your `Assets` folder should like this: 
 
