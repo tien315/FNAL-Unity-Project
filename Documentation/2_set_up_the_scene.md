@@ -155,7 +155,7 @@ A Prefab is just a file, and you can easily create an instance of the object in 
 
 For your convenience, we have provided Prefabs for most of the components of the scene (the cube, goal, table, and floor).
 
-6. In the _**Project**_ tab, go to `Assets/FNAL-Unity_Assets/bigfin.fbx` and drag and drop the `bigfin.fbx` Prefab into the _**Hierarchy**_ tab.
+6. In the _**Project**_ tab, go to `Assets/FNAL-Unity-Assets/bigfin.fbx` and drag and drop the `bigfin.fbx` Prefab into the _**Hierarchy**_ tab.
 
 7. Repeat the above action with the `Goal`, `Table` and `Floor` Prefabs. 
 
