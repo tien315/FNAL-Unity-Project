@@ -12,15 +12,15 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 
 - [Part 1: Creating a URDF](#link-part-1)
 - [Part 2: Create a Unity scene with an imported URDF](#link-part-2)
-- [Part 3: Setting up a scene in Unity for data collection](#link-part-2)
-- [Part 3: Creating Randomizers](#link-part-3)
-- [Part 4: TrajectoryPlanner.cs and how it works](#link-part-4)
-- [Part 5: ROS Files and Basics](#link-part-5)
-- [Part 6: ROS nodes in the ur3_moveit package](#link-part-6)
-- [Part 7: Data Collection and Model Training](#link-part-7)
-- [Part 8: Pick-and-Place](#link-part-8)
-- [Part 9: Modifiers](#link-part-9)
-- [Part 10: Connecting ROS to a real UR3e](#link-part-10)
+- [Part 3: Setting up a scene in Unity for data collection](#link-part-3)
+- [Part 4: Creating Randomizers](#link-part-4)
+- [Part 5: TrajectoryPlanner.cs and how it works](#link-part-5)
+- [Part 6: ROS Files and Basics](#link-part-6)
+- [Part 7: ROS nodes in the ur3_moveit package](#link-part-7)
+- [Part 8: Data Collection and Model Training](#link-part-8)
+- [Part 9: Pick-and-Place](#link-part-9)
+- [Part 10: Modifiers](#link-part-10)
+- [Part 11: Connecting ROS to a real UR3e](#link-part-11)
 
 ---
 
@@ -49,7 +49,46 @@ This part focuses on setting up the scene for data collection using the Unity Co
 If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
 
 ---
-### <a name="link-part-4">[Part 4: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
+
+### <a name="link-part-4">[Part 4: Creating Randomizers](Documentation/4_creating_randomizers.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on creating our own randomizers for the camera and modifying 
+
+If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+
+---
+
+### <a name="link-part-5">[Part 5: TrajectoryPlanner.cs and How It Works](Documentation/5_trajectoryplanner.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
+
+If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+
+---
+
+### <a name="link-part-6">[Part 6: Ros Files and Basics](Documentation/6_ROS.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
+
+If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+
+---
+### <a name="link-part-7">[Part 7: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
+
+If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+
+---
+### <a name="link-part-8">[Part 8: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
 
 <img src="Documentation/Images/0_json_environment.png" width=400/>
 
