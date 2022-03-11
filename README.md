@@ -31,9 +31,9 @@ This part is about setting up a URDF or Universal Robot Description File that we
 
 ---
 
-### <a name="link-part-2">[Part 2: Setup the Scene for Data Collection](Documentation/2_set_up_the_data_collection_scene.md)</a>
+### <a name="link-part-2">[Part 2: Setup the Scene in Unity](Documentation/2_set_up_the_scene.md)</a>
 
-<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+<img src="Documentation/Images/0_scene.png" width=400/>
 
 This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data.
 
