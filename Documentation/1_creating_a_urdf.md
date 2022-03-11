@@ -88,4 +88,4 @@ You can name the file whatever you want, but keep it simple and descriptive beca
 
 
 
-### Proceed to [Part 2](2_set_up_the_data_collection_scene.md).
+### Proceed to [Part 2](2_set_up_the_scene.md).
