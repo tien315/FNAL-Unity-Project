@@ -11,7 +11,6 @@ Unfortunately for us, Unity cant read XACROs so we will have to assemble our rob
   - [Putting the files in the correct place](#step-1)
   - [Edit the XACRO](#step-2)
   - [Converting our XACROs into a URDF](#step-3)
-  - [Set Up the Scene](#step-4)
 
 ---
 
