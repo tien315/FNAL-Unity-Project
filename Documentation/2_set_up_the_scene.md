@@ -153,11 +153,11 @@ Unity’s [Prefab](https://docs.unity3d.com/2020.2/Documentation/Manual/Prefabs.
 
 A Prefab is just a file, and you can easily create an instance of the object in the scene from a Prefab by dragging it into the _**Hierarchy**_ tab.
 
-For your convenience, we have provided Prefabs for most of the components of the scene (the cube, goal, table, and floor).
+For your convenience, we have provided Prefabs for most of the components of the scene (the goal, table, and floor).
 
-6. In the _**Project**_ tab, go to `Assets/FNAL-Unity-Assets/bigfin.fbx` and drag and drop the `bigfin.fbx` Prefab into the _**Hierarchy**_ tab.
+6. In the _**Project**_ tab, go to `Assets/FNAL-Unity-Assets/Prefabs/bigfin.prefab` and drag and drop the `bigfin.prefab` Prefab into the _**Hierarchy**_ tab.
 
-7. Repeat the above action with the `Goal`, `Table` and `Floor` Prefabs. 
+7. Repeat the above action with the `Goal`, `Table` and `Floor` Prefabs located in `Assets/FNAL-Unity-Assets/Prefabs/Part1` folder. 
 
 >Note: If importing new models, it is important to consider scale.  Unity defaults to 1 meter units of measure. If your model was created with cm/g/s scale, you will need to scale the model to 0.01 or it will be larger than expected.
 
