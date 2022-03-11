@@ -131,9 +131,16 @@ As seen above, the new Scene already contains a camera (`Main Camera`) and a lig
 #### Adding Tutorial Files
 Now it is time to add some more objects to our scene. Before doing so, we need to import some folders containing the required assets. 
 
-4. Download [TutorialAssets.zip](https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation/releases/download/v0.0.1/TutorialAssets.zip), and unzip it. It should contain the following subfolders: `Materials`, `Prefabs`, `RosMessages`, `Scripts`, `URDFs`.
+4. Clone [FNAL-Unity-Assets](https://github.com/tien315/FNAL-Unity-Assets) with the following command:
 
-5. Drag and Drop the `TutorialAssets` folder from your operating system's file explorer onto the `Assets` folder in the _**Project**_ tab of the editor. 
+```bash
+git clone --recurse-submodules https://github.com/tien315/FNAL-Unity-Assets
+```
+
+It should contain the following subfolders: `Materials`, `Prefabs`, `RosMessages`, `Scripts`, `URDFs`.
+
+5. Drag and Drop the `FNAL-Unity-Assets` folder from your operating system's file explorer onto the `Assets` folder in the _**Project**_ tab of the editor.
+6. Delete any other files in the Assets folder or you will receive errors of duplicate scripts in the directory when running the simulation.
 
 Your `Assets` folder should like this: 
 
@@ -148,10 +155,11 @@ A Prefab is just a file, and you can easily create an instance of the object in 
 
 For your convenience, we have provided Prefabs for most of the components of the scene (the cube, goal, table, and floor).
 
-6. In the _**Project**_ tab, go to `Assets/TutorialAssets/Prefabs/Part1` and drag and drop the `Cube` Prefab into the _**Hierarchy**_ tab.
+6. In the _**Project**_ tab, go to `Assets/bigfin.fbx` and drag and drop the `bigfin.fbx` Prefab into the _**Hierarchy**_ tab.
 
 7. Repeat the above action with the `Goal`, `Table` and `Floor` Prefabs. 
 
+Note: If importing new models, it is important to consider scale.  Unity defaults to 1 meter units of measure. If your model was created with cm/g/s scale, you will need to scale the model to 0.01 or it will be larger than expected.
 
 <p align="center">
 <img src="Gifs/1_import_prefabs.gif"/>
@@ -161,9 +169,9 @@ For your convenience, we have provided Prefabs for most of the components of the
 
 
 #### Importing the Robot
-Finally we will add the robot and the URDF files in order to import the UR3 Robot. 
+Finally we will add the robot and the URDF files in order to import the UR3e Robot. 
 
-8. In the _**Project**_ tab, go to `Assets/TutorialAssets/URDFs/ur3_with_gripper` and right click on the `ur3_with_gripper.urdf` file and select `Import Robot From Selected URDF file`. A window will pop up, keep the default **Y Axis** type and `VHACD` **Mesh Decomposer** in the Import menu. Then, click Import URDF. These actions are shown in the video below. 
+8. In the _**Project**_ tab, go to `Assets/URDFs/ur3e_with_gripper` and right click on the `ur3e_with_gripper.urdf` file and select `Import Robot From Selected URDF file`. A window will pop up, keep the default **Y Axis** type and `VHACD` **Mesh Decomposer** in the Import menu. Then, click Import URDF. These actions are shown in the video below. 
 
 >Note: Unity uses a left-handed coordinate system in which the y-axis points up. However, many robotics packages use a right-handed coordinate system in which the z-axis or x-axis point up. For this reason, it is important to pay attention to the coordinate system when importing URDF files or interfacing with other robotics software.
 
@@ -177,7 +185,7 @@ Finally we will add the robot and the URDF files in order to import the UR3 Robo
 
 #### Setting up the Robot
 
-9. In the _**Hierarchy**_ tab, select the `ur3_with_gripper` GameObject and in the _**Inspector**_ view, go to the `Controller` script and set the `Stiffness` to **10000**, the `Damping` to **1000** and the `Force Limit` to **1000**. These are physics properties that control how the robot moves.
+9. In the _**Hierarchy**_ tab, select the `ur3e_with_gripper` GameObject and in the _**Inspector**_ view, go to the `Controller` script and set the `Stiffness` to **10000**, the `Damping` to **1000** and the `Force Limit` to **1000**. These are physics properties that control how the robot moves.
 
 10. In the _**Hierarchy**_ tab, click on the arrow to the left of the `ur3_with_gripper` GameObject to expand it, then expand `world`, and select `base_link`. In the `Articulation Body` component, toggle on `Immovable`. This will fix the robot base to its current position.
 
