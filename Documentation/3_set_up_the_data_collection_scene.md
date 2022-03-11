@@ -1,6 +1,6 @@
-# Object Pose Estimation Tutorial: Part 2
+# FNAL Unity Project Tutorial: Part 3
 
-In [Part 1](1_set_up_the_scene.md) of the tutorial, we learned:
+In [Part 2](2_set_up_the_scene.md) of the tutorial, we learned:
 * How to create a Unity Scene
 * How to use the Package Manager to download and install Unity packages
 * How to move and rotate objects in the Scene
@@ -284,6 +284,6 @@ If you press play, you should see that the color, direction, and intensity of th
 <img src="Gifs/2_light_randomizer.gif" height=600/>
 </p>
 
-### Proceed to [Part 3](3_data_collection_model_training.md).
+### Proceed to [Part 4](4_data_collection_model_training.md).
 
-### Go back to [Part 1](1_set_up_the_scene.md)
+### Go back to [Part 2](2_set_up_the_scene.md)
