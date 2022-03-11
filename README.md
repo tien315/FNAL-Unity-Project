@@ -2,9 +2,9 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This tutorial will go through the steps necessary to perform pose estimation with a UR3e robotic arm in Unity. You’ll gain experience integrating ROS with Unity, crating and importing URDF models, collecting labeled training data, and training and deploying a deep learning model. By the end of this tutorial, you will be able to perform pick-and-place with a robot arm in Unity, using computer vision to perceive the object the robot picks up.
+This tutorial will go through the steps necessary to perform pose estimation with a UR3e robotic arm in Unity. You’ll gain experience integrating ROS with Unity, creating and importing URDF models, collecting labeled training data, and training and deploying a deep learning model. By the end of this tutorial, you will be able to perform pick-and-place with a robot arm in Unity, using computer vision to perceive the object the robot picks up.
 
-This tutorial is built upon the work done by Unity Technologies for their [Robotics Object Pose Estimation Demo](https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation).
+This tutorial was created by [Team 41](Documentation/team41.md) of the senior class of 2022 of the [University of Illinois at Chicago (UIC)](http://www.uic.edu). This tutorial is built upon the work done by Unity Technologies for their [Robotics Object Pose Estimation Demo](https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation). Many portions of this tutorial are identical to the tutorial by Unity Technologies. Additional descriptions for certain items and steps taken by Team 41 specific to the senior design project were added to facilitate the continuation of our work by future senior design teams at UIC.
 
 > Note: This project has been developed with Python 3 and ROS Noetic.
 
