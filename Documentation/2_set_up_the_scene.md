@@ -1,6 +1,6 @@
-# Object Pose Estimation Tutorial: Part 1
+# FNAL Unity Project Tutorial: Part 2
 
-In this first part of the tutorial, we will start by downloading and installing the Unity Editor. We will install our project's dependencies: the Perception, URDF, and TCP Connector packages. We will then use a set of provided prefabs to easily prepare a simulated environment containing a table, a cube, and a working robot arm. 
+In this second part of the tutorial, we will start by downloading and installing the Unity Editor. We will install our project's dependencies: the Perception, URDF, and TCP Connector packages. We will then use a set of provided prefabs to easily prepare a simulated environment containing a table, a cube, and a working robot arm. 
 
 
 **Table of Contents**
@@ -186,4 +186,4 @@ Finally we will add the robot and the URDF files in order to import the UR3 Robo
 </p>
 
 
-### Proceed to [Part 2](2_set_up_the_data_collection_scene.md).
+### Proceed to [Part 3](3_set_up_the_data_collection_scene.md).
