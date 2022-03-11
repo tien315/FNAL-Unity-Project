@@ -71,20 +71,24 @@ Install the following packages with the provided git URLs:
     * This will help us collect training data for our machine learning model. 
 
 ```bash
-https://github.com/Unity-Technologies/com.unity.perception.git
+com.unity.perception
 ```
 
 2. [URDF Importer package](https://github.com/Unity-Technologies/URDF-Importer) - `https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.2.0-light`
     * This package will help us import a robot into our scene from a file in the [Unified Robot Description Format (URDF)](http://wiki.ros.org/urdf).
 
 ```bash
-https://github.com/Unity-Technologies/URDF-Importer.git
+https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2
 ```
 3. [TCP Connector package](https://github.com/Unity-Technologies/ROS-TCP-Connector) - `https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector#v0.2.0-light`
     * This package will enable a connection between ROS and Unity. 
 
 ```bash
-https://github.com/Unity-Technologies/ROS-TCP-Connector.git
+https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector
+```
+
+```bash
+https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.visualizations
 ```
 
 >Note: If you encounter a Package Manager issue, check the [Troubleshooting Guide](troubleshooting.md) for potential solutions.
