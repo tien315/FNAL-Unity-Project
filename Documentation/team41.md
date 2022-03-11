@@ -1,1 +1,1 @@
-Alan Tieng [atieng3@uic.edu](atieng3@uic.edu)
+Alan Tieng [atieng3@uic.edu](mailto:atieng3@uic.edu)
