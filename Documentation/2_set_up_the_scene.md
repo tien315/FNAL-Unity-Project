@@ -71,24 +71,20 @@ Install the following packages with the provided git URLs:
     * This will help us collect training data for our machine learning model. 
 
 ```bash
-com.unity.perception
+com.unity.perception@0.8.0-preview.3
 ```
 
 2. [URDF Importer package](https://github.com/Unity-Technologies/URDF-Importer) - `https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.2.0-light`
     * This package will help us import a robot into our scene from a file in the [Unified Robot Description Format (URDF)](http://wiki.ros.org/urdf).
 
 ```bash
-https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2
+https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.2.0-light
 ```
 3. [TCP Connector package](https://github.com/Unity-Technologies/ROS-TCP-Connector) - `https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector#v0.2.0-light`
     * This package will enable a connection between ROS and Unity. 
 
 ```bash
-https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector
-```
-
-```bash
-https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.visualizations
+https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector#v0.2.0-light
 ```
 
 >Note: If you encounter a Package Manager issue, check the [Troubleshooting Guide](troubleshooting.md) for potential solutions.
@@ -155,7 +151,6 @@ git clone --recurse-submodules https://github.com/tien315/FNAL-Unity-Assets
 It should contain the following subfolders: `Materials`, `Prefabs`, `RosMessages`, `Scripts`, `URDFs`.
 
 5. Drag and Drop the `FNAL-Unity-Assets` folder from your operating system's file explorer onto the `Assets` folder in the _**Project**_ tab of the editor.
-6. Delete Scripts folder in the _**Project**_ tab or you will receive errors of duplicate scripts when running the simulation.
 
 Your `Assets` folder should like this: 
 
