@@ -4,7 +4,7 @@ In this first part of the tutorial, we will start by learning how to create a UR
 
 Another way to use XACROs is to have a macro of a robot arm, and macros of each accessory. This way, a robot arm can be attached to many different kinds of accessories such as a gripper, a camera, or sensors, all without having to rewrite a URDF from scratch for each combination.
 
-Unfortunately for us, Unity cant read XACROs so we will have to assemble our robot and convert our collection of macros into a single URDF. This tutorial will show the step by step process of creating a Universal-Robots model UR3e robot arm equipped with a Robotiq 2F-85 2-fingered gripper. At the time of writing this tutorial, a XACRO of the Robotiq Wrist Camera is not available.  It is possible to use the STL provided by the manufacturer to [create one](sw2urdf.md), but it would be purely for aesthetics as its only real function in the simulation is as a spacer.
+Unfortunately for us, Unity cant read XACROs so we will have to assemble our robot and convert our collection of macros into a single URDF. This tutorial will show the step by step process of creating a Universal-Robots model UR3e robot arm equipped with a Robotiq 2F-85 2-fingered gripper. At the time of writing this tutorial, a XACRO of the Robotiq Wrist Camera is not available.  It is possible to use the STL provided by the manufacturer to [create one](http://wiki.ros.org/sw_urdf_exporter), but it would be purely for aesthetics as its only real function in the simulation is as a spacer.
 
 **Table of Contents**
   - [Requirements](#reqs)
