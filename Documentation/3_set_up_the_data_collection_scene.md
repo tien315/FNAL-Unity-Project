@@ -7,44 +7,58 @@ In [Part 2](2_set_up_the_scene.md) of the tutorial, we learned:
 * How to instantiate GameObjects with Prefabs
 * How to import a robot from a URDF file  
     
-You should now have a table, a cube, a camera, and a robot arm in your Scene. In this part we will prepare the Scene for data collection with the Perception package. 
+You should now have a table, a fin, a camera, a goal, and a robot arm in your Scene. In this part we will prepare the Scene for data collection with the Perception package. 
 
 <p align="center">
 <img src="Images/2_Pose_Estimation_Data_Collection.png" width="680" height="520"/>
 </p>
 
 **Table of Contents**
-  - [Equip the Camera for Data Collection](#step-1)
-  - [Set Up Labelling and Label Configurations](#step-2)
+  - [Add a Wrist Camera to the Robot](#step-1)
+  - [Add a Training Camera to the Scene](#step-2)
   - [Add and Set Up Randomizers](#step-3)
+  - [Equip the Camera for Data Collection](#step-4)
+  - [Set Up Labelling and Label Configurations](#step-5)
 
 ---
 
-### <a name="step-1">Equip the Camera for Data Collection</a>
+### <a name="step-1">Add a Wrist Camera to the Robot</a>
 
 The images you generate to train your deep learning model and the images you later use for inference during the pick-and-place task will need to have the same resolution. We will now set this resolution.
 
-1. In the ***Game*** view, click on the dropdown menu in front of `Display 1`. Then, click **+** to create a new preset. Make sure `Type` is set to `Fixed Resolution`. Set `Width` to `650` and `Height` to `400`. The gif below depicts these actions. 
+1. In the ***Game*** view, click on the dropdown menu in front of `Display 1`. Then, click **+** to create a new preset. Make sure `Type` is set to `Fixed Resolution`. Set `Width` to `650` and `Height` to `400`. The gif below depicts these actions. You can name this preset 'Tutorial.'
 
 <p align="center">
 <img src="Gifs/2_aspect_ratio.gif"/>
 </p>
 
-We now need to add a few components to our camera in order to equip it for synthetic data generation. 
+We now need to add a camera to the robot's wrist to mimic the Robotiq Wrist camera attached to our actual robot.
 
-2. Select the `Main Camera` GameObject in the _**Hierarchy**_ tab and in the _**Inspector**_ tab, click on _**Add Component**_.
+2. Open the `ur3e_with_gripper` GameObject hierarchy child links all the way down to ee_link.
 
-3. Start typing `Perception Camera` in the search bar that appears, until the `Perception Camera` script is found, with a **#** icon to the left.
+3. Right click ee_link and select `Create > Camera`. There will now be a camera affixed to the end effector of the robot and the camera origin is tied to the position of the end effector, not its global position within the scene. Name this camera 'WristCamera'.
 
-4. Click on this script to add it as a component. Your camera is now a `Perception` camera.
+4. You'll notice that the camera is pointed in a strange direction and it may not be oriented correctly. Make sure the `WristCamera` GameObject is selected and change the coordinates to the following:
 
-5. From the top menu bar of the editor, go to `Edit > Project Settings > Editor` and uncheck `Asynchronous Shader Compilation` under `Shader Compilation` options.
+<p align="center">
+<img src="Images/3_wrist_camera_settings.png"/>
+</p>
+
+This will align the camera to the correct position and orientation to mimic the real one. 
+
+5. Select the `Main Camera` GameObject in the _**Hierarchy**_ tab and in the _**Inspector**_ tab, click on _**Add Component**_.
+
+6. Start typing `Perception Camera` in the search bar that appears, until the `Perception Camera` script is found, with a **#** icon to the left.
+
+7. Click on this script to add it as a component. Your camera is now a `Perception` camera.
+
+8. From the top menu bar of the editor, go to `Edit > Project Settings > Editor` and uncheck `Asynchronous Shader Compilation` under `Shader Compilation` options.
 
 In the ***Inspector*** view for the `Perception Camera` component, you can see an empty list (`List is Empty`). This is the list of Labelers. For each type of ground-truth you wish to generate alongside your captured frames, you will need to add a corresponding Labeler to this list. In our project we want to extract the position and orientation of an object, so we will use the `BoundingBox3DLabeler`. 
 
 There are several other types of Labelers available, and you can even write your own. If you want more information on Labelers, you can consult the [Perception package documentation](https://github.com/Unity-Technologies/com.unity.perception).
 
-6. In the _**Inspector**_ view of the `Perception Camera` component, click on the _**+**_ button at the bottom right corner of the `List is Empty` field, and select `BoundingBox3DLabeler`. 
+9. In the _**Inspector**_ view of the `Perception Camera` component, click on the _**+**_ button at the bottom right corner of the `List is Empty` field, and select `BoundingBox3DLabeler`. 
 
 This Labeler will annotate the captured output with 3D bounding boxes of GameObjects in the Scene that are labelled. If the `Perception Camera`'s `Show Labeler Visualizations` option is enabled, these bounding boxes will also be visualized in real-time in the ***Scene*** view as data is generated. We will next learn how to set up this Labeler.
 
@@ -53,6 +67,11 @@ Once you add the Labeler, the ***Inspector*** view of the `Perception Camera` co
 <p align="center">
 <img src="Images/2_perception_camera.png" width="500"/>
 </p>
+
+Also, change the `Tag` of the WristCamera to MainCamera, then uncheck the box next to its name.  This camera will be used during the simulation, but not the data collection portion of this tutorial so we will not need it yet.
+
+
+
 
 
 ### <a name="step-2">Set Up Labelling and Label Configurations</a>

@@ -202,9 +202,9 @@ Finally we will add the robot and the URDF files in order to import the UR3e Rob
 
 #### Setting up the Robot
 
-9. In the _**Hierarchy**_ tab, select the `ur3e_with_gripper` GameObject and in the _**Inspector**_ view, go to the `Controller` script and set the `Stiffness` to **10000**, the `Damping` to **1000** and the `Force Limit` to **1000**. These are physics properties that control how the robot moves.
+10. In the _**Hierarchy**_ tab, select the `ur3e_with_gripper` GameObject and in the _**Inspector**_ view, go to the `Controller` script and set the `Stiffness` to **10000**, the `Damping` to **1000** and the `Force Limit` to **1000**. These are physics properties that control how the robot moves.
 
-10. In the _**Hierarchy**_ tab, click on the arrow to the left of the `ur3_with_gripper` GameObject to expand it, then expand `world`, and select `base_link`. In the `Articulation Body` component, toggle on `Immovable`. This will fix the robot base to its current position.
+11. In the _**Hierarchy**_ tab, click on the arrow to the left of the `ur3e_with_gripper` GameObject to expand it, then expand `world`, and select `base_link`. In the `Articulation Body` component, toggle on `Immovable`. This will fix the robot base to its current position.
 
 <p align="center">
 <img src="Gifs/1_robot_settings.gif" width=800 height=465/>
