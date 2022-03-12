@@ -28,7 +28,7 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 
 <img src="Documentation/urdf_img.png" width=400 />
 
-This part is about setting up a URDF or Unified Robot Description File that we can import into our simulation.
+This part is about setting up a URDF or Unified Robot Description Format file that we can import into our simulation.
 
 ---
 
