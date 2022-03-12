@@ -97,6 +97,7 @@ The robot does not move as expected because there is too much freedom to choose 
 
 <img src="Images/joint_limit.png"/>
 
+3. Save and exit.
 
 ### <a name="step-4">Converting our XACROs into a URDF</a>
 
@@ -113,7 +114,7 @@ rosrun xacro xacro --inorder -o ur3e_with_gripper.urdf ur3e_with_gripper.xacro
 
 This command follows the format: <!--rosrun xacro xacro --inorder -o [filename of new URDF] [filename of xacro]-->
 
-You can name the file whatever you want, but keep it simple and descriptive because we will need to keep track of it across both ROS and Unity. After running the command, you should have a URDF in the same location as the XACRO. Make a copy of this file and keep track of it because we will be editing it and the edited version will be copied over into two places. It is important that they be identical or there will be problems later.
+You can name the file whatever you want, but keep it simple and descriptive because we will need to keep track of it across both ROS and Unity. After running the command, you should have a URDF in the same location as the XACRO. Make a copy of this file and keep track of it because it will be copied over into two places. It is important that they be identical or there will be problems later.
 
 
 
