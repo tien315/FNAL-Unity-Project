@@ -34,7 +34,7 @@ This part is about setting up a URDF or Unified Robot Description Format file th
 
 ### <a name="link-part-2">[Part 2: Create a Unity scene with an imported URDF](Documentation/2_set_up_the_scene.md)</a>
 
-<img src="Documentation/Images/0_scene.png" width=400/>
+<img src="Documentation/Images/2_scene.png" width=400/>
 
 This part includes downloading and installing the Unity Editor, setting up a basic Unity scene, and importing a robot. We will import the URDF we created in step 1 using the [URDF Importer](https://github.com/Unity-Technologies/URDF-Importer) package.
 
