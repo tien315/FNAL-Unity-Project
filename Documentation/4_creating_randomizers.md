@@ -6,7 +6,7 @@ In [Part 3](3_set_up_the_data_collection_scene.md) of the tutorial, we learned:
 In this part, we will additional cameras for viewing the gripper interact with the fin, a wrist mounted camera, and a randomized training camera that will capture images from the perspective of the wrist camera.
 
 <p align="center">
-<img src="Images/2_Pose_Estimation_Data_Collection.png" width="680" height="520"/>
+<img src="Images/wrist_camera.png" width="680"/>
 </p>
 
 **Table of Contents**
