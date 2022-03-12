@@ -70,6 +70,7 @@ This part focuses on explaining the TrajectoryPanller.cs script, which is the he
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
 This part focuses on giving a very basic explanation of how ROS works and the setup of the Docker container that will run it.
+
 ---
 ### <a name="link-part-7">[Part 7: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
 
