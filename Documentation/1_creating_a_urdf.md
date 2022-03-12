@@ -43,7 +43,7 @@ git clone --recurse-submodules https://github.com/cambel/ur3
 ### <a name="step-1">Putting the files in the correct place</a>
 This next step will require you to have ROS installed and a workspace created.  You can go [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment) if you havent done it yet.
 
-1. Navigate to the /catkin_ws/src/ directory. You will need 3 things moved here.
+1. Navigate to the `/catkin_ws/src/` directory. You will need 3 things moved here.
 2. Move or copy the universal_robot repository you cloned previously.
 3. Move or copy the robotiq repository you cloned previously.
 4. Move or copy the ur3_description/urdf/ur3_robotiq85_gripper.urdf.xacro file located in the cambel/ur3 repository you cloned previously.
