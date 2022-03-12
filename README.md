@@ -19,8 +19,7 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 - [Part 7: ROS nodes in the ur3_moveit package](#link-part-7)
 - [Part 8: Data Collection and Model Training](#link-part-8)
 - [Part 9: Pick-and-Place](#link-part-9)
-- [Part 10: Modifiers](#link-part-10)
-- [Part 11: Connecting ROS to a real UR3e](#link-part-11)
+- [Part 10: Connecting ROS to a real UR3e](#link-part-10)
 
 ---
 
@@ -46,15 +45,13 @@ This part includes downloading and installing the Unity Editor, setting up a bas
 
 This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
 
-If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
-
 ---
 
 ### <a name="link-part-4">[Part 4: Creating Randomizers](Documentation/4_creating_randomizers.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
-This part focuses on creating our own randomizers for the camera and modifying 
+This part focuses on creating our own randomizers for the training camera.
 
 If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
 
@@ -64,9 +61,7 @@ If you would like to learn more about Randomizers, and apply domain randomizatio
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
-This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
-
-If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+This part focuses on explaining the TrajectoryPanller.cs script, which is the heart of the simulation in Unity.
 
 ---
 
@@ -74,18 +69,13 @@ If you would like to learn more about Randomizers, and apply domain randomizatio
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
-This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
-
-If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
-
+This part focuses on giving a very basic explanation of how ROS works and the setup of the Docker container that will run it.
 ---
 ### <a name="link-part-7">[Part 7: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
-This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
-
-If you would like to learn more about Randomizers, and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](Documentation/5_more_randomizers.md).
+This part focuses on explaining the different parts of the ur3_moveit package and how they work.
 
 ---
 ### <a name="link-part-8">[Part 8: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
@@ -107,17 +97,26 @@ To measure the success of grasping in simulation using our pre-trained model for
 
 ---
 
-### <a name="link-part-4">[Part 4: Pick-and-Place](Documentation/4_pick_and_place.md)</a>
+### <a name="link-part-9">[Part 9: Pick-and-Place](Documentation/9_pick_and_place.md)</a>
 
 <img src="Documentation/Gifs/0_demo.gif" width=400/>
 
 
-This part includes the preparation and setup necessary to run a pick-and-place task using MoveIt. Here, the cube pose is predicted by the trained deep learning model. Steps covered include:
+This part includes the preparation and setup necessary to run a pick-and-place task using MoveIt. Here, the fin pose is predicted by the trained deep learning model. Steps covered include:
 * Creating and invoking a motion planning service in ROS
 * Sending captured RGB images from our scene to the ROS Pose Estimation node for inference
 * Using a Python script to run inference on our trained deep learning model
 * Moving Unity Articulation Bodies based on a calculated trajectory
 * Controlling a gripping tool to successfully grasp and drop an object.
+
+---
+
+### <a name="link-part-0">[Part 10: Connecting ROS to a real Robot](Documentation/10_ROS_real_robot.md)</a>
+
+<img src="Documentation/Gifs/0_demo.gif" width=400/>
+
+
+This part will explain how to connect what we have done to an actual UR3e and move from simulation into the real world.
 
 ---
 
