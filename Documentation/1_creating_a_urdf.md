@@ -6,6 +6,8 @@ Another way to use XACROs is to have a XACRO of a robot arm, and XACROs of each 
 
 Unfortunately for us, Unity cant import XACROs so we will have to assemble our robot and convert our collection of XACROs into a single URDF. This tutorial will show the step-by-step process of creating a Universal-Robots model UR3e robot arm equipped with a Robotiq 2F-85 2-fingered gripper. At the time of writing this tutorial, a XACRO of the Robotiq Wrist Camera is not available.  It is possible to use the STL [provided by Robotiq](https://assets.robotiq.com/website-assets/support_documents/document/WRIST_CAMERA_20171116.STEP) to [create one](http://wiki.ros.org/sw_urdf_exporter), but it would be purely for aesthetics as its only real function in the simulation is as a spacer.
 
+A fully modified URDF has been included in the download files for the next part. If you want to skip this step, you can proceed directly to [Part 2](2_set_up_the_scene.md).
+
 **Table of Contents**
   - [Requirements](#reqs)
   - [Putting the files in the correct place](#step-1)
