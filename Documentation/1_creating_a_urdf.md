@@ -73,7 +73,7 @@ Once the files have been copied over, open the ur3_with_gripper.xacro file with 
 
 We will need to edit two files: ur3e.urdf.xacro and ur3e_joint_limited_robot.urdf.xacro. Both are located in the `/universal_robot/ur_e_description/urdf` folder.
 
-The default pose of the robot if we build it as it is described in the provided XACROs is not ideal.
+The default pose of the robot if we build it using the provided XACROs is not ideal.
 
 <img src="Images/laying_down.png"/>
 
