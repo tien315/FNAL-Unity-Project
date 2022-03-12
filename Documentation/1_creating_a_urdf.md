@@ -75,14 +75,14 @@ We will need to edit two files: ur3e.urdf.xacro and ur3e_joint_limited_robot.urd
 
 The default pose of the robot if we build it as it is described in the provided XACROs is not ideal.
 
-<img src="Documentation/Images/laying_down.png"/>
+<img src="Images/laying_down.png"/>
 
 We can see in the image that the robot appears to be lying down. We should set the robot joint positions to 0 and have the robot stand up instead.  
 
 1. Open the ur3e.urdf.xacro file in a text editor.
 2. Scroll down and look for a section describing the shoulder_lift_joint. In that section, there is a line that describes the position in xyz and rotation in rpy.
 
-<img src="Documentation/Images/edit_pose.png"/>
+<img src="Images/edit_pose.png"/>
 
 3. Edit the rotation such that rpy=<0.0 0.0 0.0>
 4. Do this for the wrist_1_joint as well.
@@ -95,7 +95,7 @@ The robot does not move as expected because there is too much freedom to choose 
 1. Open the ur3e_joint_limited_robot.urdf.xacro file. The real robot has 2pi rotations in either direction and here we can see that the joint is limited to positive and negative pi rotations.  Although this version is joint limited, it is not enough.
 2. Edit the limits to match the following.
 
-<img src="Documentation/Images/joint_limit.png"/>
+<img src="Images/joint_limit.png"/>
 
 
 ### <a name="step-4">Converting our XACROs into a URDF</a>
