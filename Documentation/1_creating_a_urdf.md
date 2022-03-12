@@ -63,17 +63,39 @@ catkin_make
 
 ### <a name="step-2">Edit the XACRO</a>
 
-Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. First we will change the comments to reflect the changes we are making. Any references to ur3 or ur5 should be changed to ur3e. Next, on line 5, there is a reference to ur_description. We need to change it to ur_e_decription to access the files for the e-Series of robots. Similarly, the ur3.urdf.xacro filename at the end of line 5 should be changed to ur3e.urdf.xacro. Continue to change all references to match our equipment including references to the gripper and you should have something that looks like this:
+Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. This will be the main XACRO that references the different parts in the correct order to assemble our robot. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. First we will change the comments to reflect the changes we are making. Any references to ur3 or ur5 should be changed to ur3e. Next, on line 5, there is a reference to ur_description. We need to change it to ur_e_decription to access the files for the e-Series of robots. Similarly, the ur3.urdf.xacro filename at the end of line 5 should be changed to ur3e.urdf.xacro. Continue to change all references to match our equipment including references to the gripper and you should have something that looks like this:
 
 <p align="center">
 <img src="xacro_screencap.png"/>
 </p>
 
-### <a name="step-3">Limiting the range of movement of the robot</a>
+### <a name="step-3">Adjusting the default pose and limiting the movement range of the robot</a>
+
+We will need to edit two files: ur3e.urdf.xacro and ur3e_joint_limited_robot.urdf.xacro. Both are located in the `/universal_robot/ur_e_description/urdf` folder.
+
+The default pose of the robot if we build it as it is described in the provided XACROs is not ideal.
+
+<img src="Documentation/Images/laying_down.png"/>
+
+We can see in the image that the robot appears to be lying down. We should set the robot joint positions to 0 and have the robot stand up instead.  
+
+1. Open the ur3e.urdf.xacro file in a text editor.
+2. Scroll down and look for a section describing the shoulder_lift_joint. In that section, there is a line that describes the position in xyz and rotation in rpy.
+
+<img src="Documentation/Images/edit_pose.png"/>
+
+3. Edit the rotation such that rpy=<0.0 0.0 0.0>
+4. Do this for the wrist_1_joint as well.
+5. Save and exit.
 
 insert GIF of wonky movement
 
 The robot does not move as expected because there is too much freedom to choose a trajectory.  The trajectory planner will sometimes select a path that is inefficient because it was the first solution it arrived at. By limiting the range of movement of the robot, we limit the number of possible paths. This way they do not include those that cause the robot to swing about and only those where the robot travels in the shortest path possible.
+
+1. Open the ur3e_joint_limited_robot.urdf.xacro file. The real robot has 2pi rotations in either direction and here we can see that the joint is limited to positive and negative pi rotations.  Although this version is joint limited, it is not enough.
+2. Edit the limits to match the following.
+
+<img src="Documentation/Images/joint_limit.png"/>
 
 
 ### <a name="step-4">Converting our XACROs into a URDF</a>
