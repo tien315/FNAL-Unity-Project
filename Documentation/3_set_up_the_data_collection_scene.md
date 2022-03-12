@@ -128,3 +128,4 @@ The _**Inspector**_ view of the `Cube` should look like the following:
 </p>
 
 
+### Proceed to [Part 4](4_creating_randomizers.md).
