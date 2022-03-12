@@ -49,7 +49,7 @@ This next step will require you to have ROS installed and a workspace created.  
 4. Move or copy the ur3_description/urdf/ur3_robotiq85_gripper.urdf.xacro file located in the cambel/ur3 repository you cloned previously.
 
 <p align="center">
-<img src="linux_screencap.png" align="center" width=950/>
+<img src="Images/1_linux_screencap.png" align="center" width=950/>
 </p>
 
 5. Open a terminal and navigate to the catkin_ws folder. Copy the following command to rebuild your catkin workspace with the new packages you have copied over so that ROS can search for files in the repositories you have copied over.
@@ -66,7 +66,7 @@ catkin_make
 Once the files have been copied over, open the ur3_with_gripper.xacro file with a text editor. This will be the main XACRO that references the different parts in the correct order to assemble our robot. The XACRO written here is for a UR3 robot with a 2F-140 gripper so we will make some small modifications. First we will change the comments to reflect the changes we are making. Any references to ur3 or ur5 should be changed to ur3e. Next, on line 5, there is a reference to ur_description. We need to change it to ur_e_decription to access the files for the e-Series of robots. Similarly, the ur3.urdf.xacro filename at the end of line 5 should be changed to ur3e.urdf.xacro. Continue to change all references to match our equipment including references to the gripper and you should have something that looks like this:
 
 <p align="center">
-<img src="xacro_screencap.png"/>
+<img src="Images/1_xacro_screencap.png"/>
 </p>
 
 ### <a name="step-3">Adjusting the default pose and limiting the movement range of the robot</a>
