@@ -42,7 +42,7 @@ This part includes downloading and installing the Unity Editor, setting up a bas
 
 ### <a name="link-part-3">[Part 3: Setup the Scene for Data Collection](Documentation/3_set_up_the_data_collection_scene.md)</a> 
 
-<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+<img src="Documentation/Images/3_data_collection_environment.png" width=400/>
 
 This part focuses on setting up the scene for data collection using the Unity Computer Vision [Perception Package](https://github.com/Unity-Technologies/com.unity.perception). You will learn how to use Perception Package [Randomizers](https://github.com/Unity-Technologies/com.unity.perception/blob/master/com.unity.perception/Documentation~/Randomization/Index.md) to randomize aspects of the scene in order to create variety in the training data. 
 
