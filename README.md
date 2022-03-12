@@ -26,7 +26,7 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 
 ### <a name="link-part-1">[Part 1: Creating a URDF](Documentation/1_creating_a_urdf.md)</a>
 
-<img src="Documentation/urdf_img.png" width=400 />
+<img src="Documentation/Images/1_urdf_img.png" width=300 />
 
 This part is about setting up a URDF or Unified Robot Description Format file that we can import into our simulation.
 
