@@ -70,11 +70,30 @@ Once you add the Labeler, the ***Inspector*** view of the `Perception Camera` co
 
 Also, change the `Tag` of the `Wrist Camera` to MainCamera, then uncheck the box next to its name.  This camera will be used during the simulation, but not the data collection portion of this tutorial so we will not need it yet.
 
+---
+
+### <a name="step-2">Add a Training Camera to the Scene</a>
+
+This will be very similar to setting up the `Wrist Camera` except this time, the Training Camera will have its origin fixed in space.
+
+3. Right click the scene name in the _**Hierarchy**_ tab and select `Create > Camera`. There will now be a floating camera within the scene. Name this camera 'Training Camera'.
+
+4. Make sure the `Training Camera` GameObject is selected and change the coordinates to the following:
+
+This will align the camera to the correct position and orientation to mimic `Wrist Camera` when it is position to capture an image. 
+
+5. Select the `Training Camera` GameObject in the _**Hierarchy**_ tab and in the _**Inspector**_ tab, click on _**Add Component**_.
+
+6. Start typing `Perception Camera` in the search bar that appears, until the `Perception Camera` script is found, with a **#** icon to the left.
+
+7. Click on this script to add it as a component. Your camera is now a `Perception` camera.
+
+9. In the _**Inspector**_ view of the `Perception Camera` component, click on the _**+**_ button at the bottom right corner of the `List is Empty` field, and select `BoundingBox3DLabeler`. 
+
+10. Also change the `Tag` of this camera to `Main Camera` and scroll down and uncheck the `Audio Listener` box.
 
 
-
-
-### <a name="step-2">Set Up Labelling and Label Configurations</a>
+### <a name="step-5">Set Up Labelling and Label Configurations</a>
 
 Our work above prepares us to collect RGB images from the camera and associated 3D bounding boxes for objects in our Scene. However, we still need to specify _which_ objects we'd like to collect poses for using the Labeler we added. In this tutorial, we will only collect the pose of the cube, but you can add more objects if you'd like.
 
