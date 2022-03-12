@@ -36,9 +36,9 @@ We now need to add a camera to the robot's wrist to mimic the Robotiq Wrist came
 
 2. Open the `ur3e_with_gripper` GameObject hierarchy child links all the way down to ee_link.
 
-3. Right click ee_link and select `Create > Camera`. There will now be a camera affixed to the end effector of the robot and the camera origin is tied to the position of the end effector, not its global position within the scene. Name this camera 'WristCamera'.
+3. Right click ee_link and select `Create > Camera`. There will now be a camera affixed to the end effector of the robot and the camera origin is tied to the position of the end effector, not its global position within the scene. Name this camera 'Wrist Camera'.
 
-4. You'll notice that the camera is pointed in a strange direction and it may not be oriented correctly. Make sure the `WristCamera` GameObject is selected and change the coordinates to the following:
+4. You'll notice that the camera is pointed in a strange direction and it may not be oriented correctly. Make sure the `Wrist Camera` GameObject is selected and change the coordinates to the following:
 
 <p align="center">
 <img src="Images/3_wrist_camera_settings.png"/>
@@ -46,7 +46,7 @@ We now need to add a camera to the robot's wrist to mimic the Robotiq Wrist came
 
 This will align the camera to the correct position and orientation to mimic the real one. 
 
-5. Select the `Main Camera` GameObject in the _**Hierarchy**_ tab and in the _**Inspector**_ tab, click on _**Add Component**_.
+5. Select the `Wrist Camera` GameObject in the _**Hierarchy**_ tab and in the _**Inspector**_ tab, click on _**Add Component**_.
 
 6. Start typing `Perception Camera` in the search bar that appears, until the `Perception Camera` script is found, with a **#** icon to the left.
 
@@ -68,7 +68,7 @@ Once you add the Labeler, the ***Inspector*** view of the `Perception Camera` co
 <img src="Images/2_perception_camera.png" width="500"/>
 </p>
 
-Also, change the `Tag` of the WristCamera to MainCamera, then uncheck the box next to its name.  This camera will be used during the simulation, but not the data collection portion of this tutorial so we will not need it yet.
+Also, change the `Tag` of the `Wrist Camera` to MainCamera, then uncheck the box next to its name.  This camera will be used during the simulation, but not the data collection portion of this tutorial so we will not need it yet.
 
 
 
