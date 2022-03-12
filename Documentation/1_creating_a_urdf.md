@@ -12,7 +12,9 @@ A fully modified URDF has been included in the download files for the next part.
   - [Requirements](#reqs)
   - [Putting the files in the correct place](#step-1)
   - [Edit the XACRO](#step-2)
-  - [Converting our XACROs into a URDF](#step-3)
+  - [Limiting range of movement of the virtual robot](#step-3)
+  - [Converting our XACROs into a URDF](#step-4)
+
 
 ---
 
@@ -67,10 +69,14 @@ Once the files have been copied over, open the ur3_with_gripper.xacro file with 
 <img src="xacro_screencap.png"/>
 </p>
 
+### <a name="step-3">Limiting the range of movement of the robot</a>
+
+insert GIF of wonky movement
+
+The robot does not move as expected because there is too much freedom to choose a trajectory.  The trajectory planner will sometimes select a path that is inefficient because it was the first solution it arrived at. By limiting the range of movement of the robot, we limit the number of possible paths. This way they do not include those that cause the robot to swing about and only those where the robot travels in the shortest path possible.
 
 
-
-### <a name="step-3">Converting our XACROs into a URDF</a>
+### <a name="step-4">Converting our XACROs into a URDF</a>
 
 Now that we have finished editing the ur3_with_gripper.xacro file, save it and then rename the file to ur3e_with_gripper.xacro to reflect the changes we made. Open a Terminal and navigate to the catkin_ws folder, then source your setup file by copying the following:
 
@@ -89,5 +95,7 @@ You can name the file whatever you want, but keep it simple and descriptive beca
 
 
 
+
+ 
 
 ### Proceed to [Part 2](2_set_up_the_scene.md).
