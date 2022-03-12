@@ -1,6 +1,12 @@
 # FNAL Unity Project Tutorial: Part 2
 
-In this second part of the tutorial, we will start by downloading and installing the Unity Editor. We will install our project's dependencies: the Perception, URDF, and TCP Connector packages. We will then use a set of provided prefabs to easily prepare a simulated environment containing a table, a cube, and a working robot arm. 
+In [Part 1](1_creating_a_urdf.md) of the tutorial, we learned:
+* Edit XACROs
+* Set robot joint limits
+* Change the robot default pose
+* Generate a URDF from XACROs using ROS
+
+In this second part of the tutorial, we will start by downloading and installing the Unity Editor. We will install our project's dependencies: the Perception, URDF Importer, and TCP Connector packages. We will then use a set of provided prefabs to easily prepare a simulated environment containing a table, a fin, and a working robot arm. 
 
 
 **Table of Contents**
