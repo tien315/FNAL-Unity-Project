@@ -10,7 +10,7 @@ In addition to the `YRotationRandomizer` and the `RobotArmObjectPositionRandomiz
 Below is the code for the `CameraRandomizer`.
 
 
-```
+```C#
 using System.Collections;
 using System.Collections.Generic;
 using System;
