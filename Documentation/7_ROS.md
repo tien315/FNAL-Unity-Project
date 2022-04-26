@@ -11,4 +11,4 @@ Topics are not the only way that nodes communicate. They can send direct message
 
 There is a lot more to ROS but for the purposes of this project, at this stage, this is all we will go into here. For adapting this project for use with a real UR3e, in-depth knowledge about controllers and communication between `Moveit!` nodes and services will be needed. For future work, this is where the focus should be.
 
-### Proceed to [Part 8](8_ur3moveit.md.md).
+### Proceed to [Part 8](8_ur3moveit.md).
