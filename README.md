@@ -95,15 +95,13 @@ This part focuses on explaining the different parts of the ur3_moveit package an
 
 This part includes running data collection with the Perception Package, and using that data to train a deep learning model. The training step can take some time. If you'd like, you can skip that step by using our pre-trained model.
 
-To measure the success of grasping in simulation using our pre-trained model for pose estimation, we did 100 trials and got the following results:
+To measure the success of grasping in simulation using our pre-trained model for pose estimation, we did 50 trials and got the following results:
 
-|                  | Success | Failures | Percent Success |
-|:----------------:|:-------:|:--------:|:---------------:|
-|Without occlusion |    82   |     5    |      94         |
-|With occlusion    |    7    |     6    |      54         |
-|All               |    89   |     11   |      89         |
-
-> Note: Data for the above experiment was collected in Unity 2020.2.1f1.
+|                   | Success | Failures | Percent Success |
+|:-----------------:|:-------:|:--------:|:---------------:|
+|Fully in-plane     |    25   |     3    |      89         |
+|Partially in-plane |    16   |     6    |      73         |
+|All                |    41   |     9    |      82         |
 
 ---
 
