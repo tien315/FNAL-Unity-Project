@@ -100,42 +100,147 @@ which captures the image from the camera and passes it to the `InvokePoseEstimat
 /// <param name="imageData"></param>
 private void InvokePoseEstimationService(byte[] imageData)
 {
-    uint imageHeight = (uint)renderTexture.height;
-    uint imageWidth = (uint)renderTexture.width;
+uint imageHeight = (uint)renderTexture.height;
+uint imageWidth = (uint)renderTexture.width;
 
-    RosMessageTypes.Sensor.Image rosImage = new RosMessageTypes.Sensor.Image(new RosMessageTypes.Std.Header(), imageWidth, imageHeight, "RGBA", isBigEndian, step, imageData);
-    PoseEstimationServiceRequest poseServiceRequest = new PoseEstimationServiceRequest(rosImage);
-    ros.SendServiceMessage<PoseEstimationServiceResponse>("pose_estimation_srv", poseServiceRequest, PoseEstimationCallback);
+RosMessageTypes.Sensor.Image rosImage = new RosMessageTypes.Sensor.Image(new RosMessageTypes.Std.Header(), imageWidth, imageHeight, "RGBA", isBigEndian, step, imageData);
+PoseEstimationServiceRequest poseServiceRequest = new PoseEstimationServiceRequest(rosImage);
+ros.SendServiceMessage<PoseEstimationServiceResponse>("pose_estimation_srv", poseServiceRequest, PoseEstimationCallback);
 }
 ```
 This is where Unity begins to interact with ROS. It formats the image into a datatype that is ROS compatible, then sends it to the `pose estimation` node for position extraction.
 
 ```C#
-    ros.SendServiceMessage<PoseEstimationServiceResponse>("pose_estimation_srv", poseServiceRequest, PoseEstimationCallback);
+ros.SendServiceMessage<PoseEstimationServiceResponse>("pose_estimation_srv", poseServiceRequest, PoseEstimationCallback);
 ```
 This line shows how the request is made: `pose_estimation_srv` is a service that handles sending requests directly to a node. The `poseServiceRequest` is the image after being formated into a ROS message type. The `PoseEstimationCallback` lets ROS know where to send its response back. The code for the `PoseEstimationCallback` function is below.
 
 ```C#
 void PoseEstimationCallback(PoseEstimationServiceResponse response)
+{
+if (response != null)
+{
+    // The position output by the model is the position of the cube relative to the camera so we need to extract its global position 
+    var estimatedPosition = Camera.main.transform.TransformPoint(response.estimated_pose.position.From<RUF>());
+    var estimatedRotation = Camera.main.transform.rotation * response.estimated_pose.orientation.From<RUF>();
+    //Debug.Log(estimatedPosition);
+    //Debug.Log(Camera.main.transform.rotation);
+
+
+    PublishJoints(estimatedPosition, estimatedRotation);
+
+    EstimatedPos.text = estimatedPosition.ToString("F3");
+    EstimatedRot.text = estimatedRotation.eulerAngles.ToString();
+}
+InitializeButton.interactable = true;
+RandomizeButton.interactable = true;
+}
+```
+
+After receiving the position and orientation of the object, the current joint state of the robot is collected and sent to the `mover` node in the same way as in `InvokePoseEstimationService`.  We can see below in the last line that the method is the same and follows the same format, but for a different ROS message datatype.
+
+```C#
+public void PublishJoints(Vector3 targetPos, Quaternion targetRot)
+{
+    MoverServiceRequest request = new MoverServiceRequest();
+    request.joints_input = CurrentJointConfig();
+    targetPos.y = (0.774f);//override target estimated height and set it to match the table surface height
+    // Pick Pose
+    request.pick_pose = new RosMessageTypes.Geometry.Pose
     {
-        if (response != null)
-        {
-            // The position output by the model is the position of the cube relative to the camera so we need to extract its global position 
-            var estimatedPosition = Camera.main.transform.TransformPoint(response.estimated_pose.position.From<RUF>());
-            var estimatedRotation = Camera.main.transform.rotation * response.estimated_pose.orientation.From<RUF>();
-            //Debug.Log(estimatedPosition);
-            //Debug.Log(Camera.main.transform.rotation);
-            
+        position = (targetPos + pickPoseOffset).To<FLU>(),
+        orientation = Quaternion.Euler(90, targetRot.eulerAngles.y, 0).To<FLU>()
+    };
 
-            PublishJoints(estimatedPosition, estimatedRotation);
+    // Place Pose
+    request.place_pose = new RosMessageTypes.Geometry.Pose
+    {
+        position = (goal.position + placePoseOffset).To<FLU>(),
+        orientation = pickOrientation.To<FLU>()
+    };
 
-            EstimatedPos.text = estimatedPosition.ToString("F3");
-            EstimatedRot.text = estimatedRotation.eulerAngles.ToString();
-        }
+    ros.SendServiceMessage<MoverServiceResponse>(rosServiceName, request, TrajectoryResponse);
+}
+```
+
+```C#
+void TrajectoryResponse(MoverServiceResponse response)
+{
+    if (response.trajectories != null && response.trajectories.Length > 0)
+    {
+        Debug.Log("Trajectory returned.");
+        StartCoroutine(ExecuteTrajectories(response));
+    }
+    else
+    {
+        Debug.LogError("No trajectory returned from MoverService.");
         InitializeButton.interactable = true;
         RandomizeButton.interactable = true;
+        ServiceButton.interactable = true;
     }
-    ```
+}
+```
 
+The trajectories are sent back to Unity in the for of arrays of joint positions.  These joint positions are small movements from one pose to another. The arm will move in small increments as the Unity iterates through them so that the arm will follow a very specific path.
 
+```C#
+/// <summary>
+///     Execute the returned trajectories from the MoverService.
+///
+///     The expectation is that the MoverService will return four trajectory plans,
+///         PreGrasp, Grasp, PickUp, and Place,
+///     where each plan is an array of robot poses. A robot pose is the joint angle values
+///     of the six robot joints.
+///
+///     Executing a single trajectory will iterate through every robot pose in the array while updating the
+///     joint values on the robot.
+/// 
+/// </summary>
+/// <param name="response"> MoverServiceResponse received from ur3_moveit mover service running in ROS</param>
+/// <returns></returns>
+private IEnumerator ExecuteTrajectories(MoverServiceResponse response)
+{
+    if (response.trajectories != null)
+    {
+        // For every trajectory plan returned
+        for (int poseIndex  = 0 ; poseIndex < response.trajectories.Length; poseIndex++)
+        {
+            // For every robot pose in trajectory plan
+            for (int jointConfigIndex  = 0 ; jointConfigIndex < response.trajectories[poseIndex].joint_trajectory.points.Length; jointConfigIndex++)
+            {
+                var jointPositions = response.trajectories[poseIndex].joint_trajectory.points[jointConfigIndex].positions;
+                float[] result = jointPositions.Select(r=> (float)r * Mathf.Rad2Deg).ToArray();
+
+                // Set the joint values for every joint
+                for (int joint = 0; joint < jointArticulationBodies.Length; joint++)
+                {
+                    var joint1XDrive  = jointArticulationBodies[joint].xDrive;
+                    joint1XDrive.target = result[joint];
+                    jointArticulationBodies[joint].xDrive = joint1XDrive;
+                }
+                // Wait for robot to achieve pose for all joint assignments
+                yield return new WaitForSeconds(jointAssignmentWait);
+            }
+
+            // Close the gripper if completed executing the trajectory for the Grasp pose
+            if (poseIndex == (int)Poses.Grasp){
+                StartCoroutine(IterateToGrip(true));
+                yield return new WaitForSeconds(jointAssignmentWait);
+            }
+            else if (poseIndex == (int)Poses.Place){
+                yield return new WaitForSeconds(poseAssignmentWait);
+                // Open the gripper to place the target cube
+                StartCoroutine(IterateToGrip(false));
+            }
+            // Wait for the robot to achieve the final pose from joint assignment
+            yield return new WaitForSeconds(poseAssignmentWait);
+        }
+
+        // Re-enable buttons
+        InitializeButton.interactable = true;
+        RandomizeButton.interactable = true;
+        yield return new WaitForSeconds(jointAssignmentWait);
+    }
+}
+```
 
