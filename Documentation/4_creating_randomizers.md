@@ -186,6 +186,7 @@ If you press **▷** (play) now, you should see the `Cube` and `Goal` objects mo
 </p>
 
 ### <a name="step-6">Light Randomizer</a>
+Note that if you want to limit the area over which the object will appear, you can modify the `ObjectPlacementPlane`, or create a new plane and replace it in the `RobotArmObjectPositionRandomizer` located in the inspector of the `Simulation Scenario`.
 
 Now we will add another Randomizer to introduce some variation into the Scene's lighting. 
 
