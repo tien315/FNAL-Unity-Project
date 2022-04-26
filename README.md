@@ -60,7 +60,7 @@ If you would like to learn more about Randomizers, and apply domain randomizatio
 
 ### <a name="link-part-5">[Part 5: More Randomizers](Documentation/5_more_randomizers.md)</a> 
 
-<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+<img src="Documentation/Images/Randomized Camera View.png" width=400/>
 
 This part will help set up a camera randomizer for a more robust model.
 
