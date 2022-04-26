@@ -74,9 +74,9 @@ This part focuses on explaining the TrajectoryPlanner.cs script, which is the he
 
 ---
 
-### <a name="link-part-7">[Part 7: Ros Files and Basics](Documentation/6_ROS.md)</a> 
+### <a name="link-part-7">[Part 7: Ros Files and Basics](Documentation/7_ROS.md)</a> 
 
-<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+<img src="Documentation/Images/5034b398c8a7c424fbac9da50dbbef7824740d41.png" width=400/>
 
 This part focuses on giving a very basic explanation of how ROS works and the setup of the Docker container that will run it.
 
