@@ -14,12 +14,13 @@ This tutorial was created by [Team 41](Documentation/team41.md) of the senior cl
 - [Part 2: Create a Unity scene with an imported URDF](#link-part-2)
 - [Part 3: Setting up a scene in Unity for data collection](#link-part-3)
 - [Part 4: Creating Randomizers](#link-part-4)
-- [Part 5: TrajectoryPlanner.cs and how it works](#link-part-5)
-- [Part 6: ROS Files and Basics](#link-part-6)
-- [Part 7: ROS nodes in the ur3_moveit package](#link-part-7)
-- [Part 8: Data Collection and Model Training](#link-part-8)
-- [Part 9: Pick-and-Place](#link-part-9)
-- [Part 10: Connecting ROS to a real UR3e](#link-part-10)
+- [Part 5: More Randomizers](#link-part-5)
+- [Part 6: TrajectoryPlanner.cs and how it works](#link-part-6)
+- [Part 7: ROS Files and Basics](#link-part-7)
+- [Part 8: ROS nodes in the ur3_moveit package](#link-part-8)
+- [Part 9: Data Collection and Model Training](#link-part-9)
+- [Part 10: Pick-and-Place](#link-part-10)
+- [Part 11: Connecting ROS to a real UR3e](#link-part-11)
 
 ---
 
@@ -57,29 +58,37 @@ If you would like to learn more about Randomizers, and apply domain randomizatio
 
 ---
 
-### <a name="link-part-5">[Part 5: TrajectoryPlanner.cs and How It Works](Documentation/5_trajectoryplanner.md)</a> 
+### <a name="link-part-5">[Part 5: More Randomizers](Documentation/5_more_randomizers.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
-This part focuses on explaining the TrajectoryPanller.cs script, which is the heart of the simulation in Unity.
+This part will help set up a camera randomizer for a more robust model.
 
 ---
 
-### <a name="link-part-6">[Part 6: Ros Files and Basics](Documentation/6_ROS.md)</a> 
+### <a name="link-part-6">[Part 6: TrajectoryPlanner.cs and How It Works](Documentation/5_trajectoryplanner.md)</a> 
+
+<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+
+This part focuses on explaining the TrajectoryPlanner.cs script, which is the heart of the simulation in Unity.
+
+---
+
+### <a name="link-part-7">[Part 7: Ros Files and Basics](Documentation/6_ROS.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
 This part focuses on giving a very basic explanation of how ROS works and the setup of the Docker container that will run it.
 
 ---
-### <a name="link-part-7">[Part 7: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
+### <a name="link-part-8">[Part 8: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
 This part focuses on explaining the different parts of the ur3_moveit package and how they work.
 
 ---
-### <a name="link-part-8">[Part 8: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
+### <a name="link-part-9">[Part 9: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
 
 <img src="Documentation/Images/0_json_environment.png" width=400/>
 
@@ -98,7 +107,7 @@ To measure the success of grasping in simulation using our pre-trained model for
 
 ---
 
-### <a name="link-part-9">[Part 9: Pick-and-Place](Documentation/9_pick_and_place.md)</a>
+### <a name="link-part-10">[Part 10: Pick-and-Place](Documentation/9_pick_and_place.md)</a>
 
 <img src="Documentation/Gifs/0_demo.gif" width=400/>
 
@@ -112,7 +121,7 @@ This part includes the preparation and setup necessary to run a pick-and-place t
 
 ---
 
-### <a name="link-part-0">[Part 10: Connecting ROS to a real Robot](Documentation/10_ROS_real_robot.md)</a>
+### <a name="link-part-11">[Part 11: Connecting ROS to a real Robot](Documentation/10_ROS_real_robot.md)</a>
 
 <img src="Documentation/Gifs/0_demo.gif" width=400/>
 
