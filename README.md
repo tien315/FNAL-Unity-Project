@@ -68,7 +68,7 @@ This part will help set up a camera randomizer for a more robust model.
 
 ### <a name="link-part-6">[Part 6: TrajectoryPlanner.cs and How It Works](Documentation/5_trajectoryplanner.md)</a> 
 
-<img src="Documentation/Images/0_data_collection_environment.png" width=400/>
+<img src="Documentation/Images/diagram.png" width=400/>
 
 This part focuses on explaining the TrajectoryPlanner.cs script, which is the heart of the simulation in Unity.
 
