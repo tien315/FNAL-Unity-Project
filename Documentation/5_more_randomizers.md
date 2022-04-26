@@ -62,3 +62,5 @@ Here we can see screen captures where both the object and the camera positions a
 <p align="center">
 <img src="Images/Randomized Camera View.png" height=500/>
 </p>
+
+### Proceed to [Part 6](5_trajectoryplanner.md).
