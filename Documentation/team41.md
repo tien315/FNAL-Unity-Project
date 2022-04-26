@@ -3,6 +3,7 @@ MIE Senior Design Team 41
 University of Illinois at Chicago
 
 ---
+Dr. Jonathan Komperda [jonk@uic.edu](mailto:jonk@uic.edu) (Faculty Advisor)
 
 Alan Tieng [atieng3@uic.edu](mailto:atieng3@uic.edu)
 
