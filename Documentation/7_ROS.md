@@ -11,4 +11,6 @@ Topics are not the only way that nodes communicate. They can send direct message
 
 There is a lot more to ROS but for the purposes of this project, at this stage, this is all we will go into here. For adapting this project for use with a real UR3e, in-depth knowledge about controllers and communication between `Moveit!` nodes and services will be needed. For future work, this is where the focus should be.
 
+This tutorial will demonstrate how to use Docker to create a virtual machine instance of ROS with the `ur3_moveit package`.  While it is convenient for setting up the demo, it will be necessary to have a separate machine to run ROS permanently so that changes can be made to packages, scripts, configuration files, etc. This is because a docker image must be rebuilt every time a change is made.  The instructions on the Docker setup can be found in the pick and place part of this tutorial.
+
 ### Proceed to [Part 8](8_ur3moveit.md).
