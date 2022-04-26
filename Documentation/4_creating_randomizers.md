@@ -213,7 +213,7 @@ If you press play, you should see that the color, direction, and intensity of th
 <img src="Gifs/2_light_randomizer.gif" height=600/>
 </p>
 
-### Proceed to [Part 4](4_data_collection_model_training.md).
+### Proceed to [Part 5](5_more_randomizers.md).
 
-### Go back to [Part 2](2_set_up_the_scene.md)
+### Go back to [Part 3](3_set_up_the_data_collection_scene.md)
 
