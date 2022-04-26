@@ -19,6 +19,7 @@ A fully modified URDF has been included in the download files for the next part.
 ---
 
 ### <a name="reqs">Requirements</a>
+Performing the steps in this tutorial will require you to have ROS installed.  You can follow the instructions for installing ROS [here](http://wiki.ros.org/noetic/Installation/Ubuntu).  It is recommended to install ROS Noetic on Ubuntu 20.04.3LTS as this was the setup used in this project. Other versions may have compatibility issues.
 
 To follow this tutorial you need to **clone** the following repositories. They contain the XACROs as well as the visual and collision meshes we will need to assemble our robot.
 
