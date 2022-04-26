@@ -1,4 +1,4 @@
-# Exercises for the Reader
+# More Randomizers
 
 In the main tutorial, we randomized the position and rotation of the cube. However, the Perception Package supports much more sophisticated environment randomization. In this (optional) section we will create a richer and more varied environment by adding one more Randomizer to our scene.
 
