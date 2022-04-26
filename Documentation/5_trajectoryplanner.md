@@ -1,4 +1,4 @@
-#TrajectoryPlanner.cs and how it works
+# TrajectoryPlanner.cs and how it works
 
 The `TrajectoryPlanner.cs`script is the main script that handles the tasks of the scenario.  It captures the image, sends and receives responses to the pose estimation and mover nodes in ROS and moves the robot model by making changes to the joint positions.  We will go over some important parts of the code below.
 
@@ -243,4 +243,4 @@ private IEnumerator ExecuteTrajectories(MoverServiceResponse response)
     }
 }
 ```
-
+### Proceed to [Part 7](7_ROS.md).
