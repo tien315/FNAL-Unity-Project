@@ -1,6 +1,6 @@
 # ROS Basics
 <p align="center">
-<img src="Images/5034b398c8a7c424fbac9da50dbbef7824740d41.png" align="center" width=950/>
+<img src="Images/5034b398c8a7c424fbac9da50dbbef7824740d41.png" align="center" width=450/>
 </p>
 
 The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. You can read more about ROS [here](http://https://www.ros.org/).  There are tutorials to help you get set up.
