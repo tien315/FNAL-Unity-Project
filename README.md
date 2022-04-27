@@ -6,6 +6,8 @@ This tutorial will go through the steps necessary to perform pose estimation wit
 
 This tutorial was created by [Team 41](Documentation/team41.md) of the senior class of 2022 of the [University of Illinois at Chicago (UIC)](http://mie.uic.edu). This tutorial is built upon the work done by Unity Technologies for their [Robotics Object Pose Estimation Demo](https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation). Many portions of this tutorial are identical to the tutorial by Unity Technologies. Additional descriptions for certain items and steps taken by Team 41 specific to the senior design project were added to facilitate the continuation of our work by future senior design teams at UIC. This project was sponsored by [Fermilab](http://fnal.gov) who provided the UR3e, gripper, and camera to test our code on. Thank you to Dr. Katsuya Yonehara and George Lolov of Fermilab for their support.
 
+Please visit [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub) for more information about how to integrate ROS and Unity in one of their many tutorials.
+
 > Note: This project has been developed with Python 3 and ROS Noetic.
 
 **Table of Contents**
