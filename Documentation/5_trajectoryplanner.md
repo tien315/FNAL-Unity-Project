@@ -15,7 +15,7 @@ private readonly Vector3 pickPoseOffset = new Vector3(0, 0.240f, 0);//original (
 private readonly Vector3 placePoseOffset = new Vector3(0, 0.276f, 0);//.276f
 ```
 
-Near the top of the script, some of the variables are hardcoded for ease of use with Unity.  Because the gripper controls are handled in Unity and not considered as part of the robot kinematics in ROS, the gripper angle when closed has to be manually adjusted.  This is important if the with of the object changes. Too wide and the gripper will fail to grasp.  Too tight and the finger joints will clip through each other.
+Near the top of the script, some of the variables are hardcoded for ease of use with Unity.  Because the gripper controls are handled in Unity and not considered as part of the robot kinematics in ROS, the gripper angle when closed has to be manually adjusted.  This is important if the width of the object changes. Too wide and the gripper will fail to grasp.  Too tight and the finger joints will clip through each other or the object.
 
 The TCP or tool center point offset are also set here.  Again, because the gripper is not considered in the kinematics of the robot in ROS, the end effector is the flange at the end of wrist 3.  So we need to offset the end effector position upward to give space for the gripper.  For very small objects, it may be necessary to fine tune this variable for consistent results during simulation.
 
