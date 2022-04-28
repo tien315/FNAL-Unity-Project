@@ -1,11 +1,5 @@
 # Object Pose Estimation Tutorial: Part 4
 
-
-In [Part 1](1_set_up_the_scene.md) of the tutorial, we learned how to create our Scene in Unity Editor. In [Part 2](2_set_up_the_data_collection_scene.md), we set up the Scene for data collection.
-In [Part 3](3_data_collection_model_training.md) we have learned: 
-* How to collect the data 
-* How to train the deep learning model
-
 In this part, we will use our trained deep learning model to predict the pose of the cube, and pick it up with our robot arm.  
 
 <p align="center">
