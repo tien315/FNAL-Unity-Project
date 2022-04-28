@@ -90,7 +90,7 @@ This part focuses on giving a very basic explanation of how ROS works and the se
 This part focuses on explaining the different parts of the ur3_moveit package and how they work.
 
 ---
-### <a name="link-part-9">[Part 9: Data Collection and Model Training](Documentation/4_data_collection_model_training.md)</a>
+### <a name="link-part-9">[Part 9: Data Collection and Model Training](Documentation/9_data_collection_model_training.md)</a>
 
 <img src="Documentation/Images/0_json_environment.png" width=400/>
 
