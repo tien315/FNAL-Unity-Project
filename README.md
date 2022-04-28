@@ -107,7 +107,7 @@ To measure the success of grasping in simulation using our pre-trained model for
 
 ---
 
-### <a name="link-part-10">[Part 10: Pick-and-Place](Documentation/9_pick_and_place.md)</a>
+### <a name="link-part-10">[Part 10: Pick-and-Place](Documentation/10_pick_and_place.md)</a>
 
 <img src="Documentation/Gifs/0_demo.gif" width=400/>
 
