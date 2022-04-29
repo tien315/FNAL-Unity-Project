@@ -231,4 +231,4 @@ You should see the following:
 </p>
 
 **Congrats! You did it!**
-### Click here to go to [Part 11](11_ROS_with_real_robot.md).
+### Click here to go to [Part 11](11_ROS_real_robot.md).
