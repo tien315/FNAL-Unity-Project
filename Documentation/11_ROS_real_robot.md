@@ -8,6 +8,10 @@ The Unity machine would transmit the image data to the ROS machine and the ROS m
 
 The next problem we ran into was that it just didnt work.  We resolved the controller conflicts (you need to disable these in the launch files.  If one package launched a configuration, the other one shouldn't launch the same one.  Find duplicate arguments being passed and disable them on one or the other.)  We configured the nodes to transmit the extracted pose data to send to the robot, but it would just hang.  No error messages or anything.  Without error message, the project devolved into trial and error. There was no more method other than to troll the forums and deliberately change code just to see what breaks.  In the end we were not able to figure it out but we hope that with our notes here we can give you a head start. Our advice, it might be better to just write a single ROS package that does everything from scratch. Rope a CS student into helping you because you will need to know C# and Python at a moderate level.  Lean on the tutorials and have every member set up and perform the simulation.  Especially use the [ROS tutorials](http://wiki.ros.org/ROS/Tutorials) and the [MoveIt! tutorials](https://github.com/ros-planning/moveit).  We didn't copy their contents in this tutorial but they were extremely useful.
 
+On the UR3e, we have reset the safety limits on the joints to factory defaults so that it is fully functional.  Remember to set joint limits or the arm will do strange poses and lock up when performing poses with small changes.  Also, find go through the the [UR tutorials](https://academy.universal-robots.com/) for the e-Series tracks to learn how to program in Polyscope.  We're not sure how useful it will be but it's fun to watch the robot move.
+
+Also, be careful with the teaching pendant! Last we saw, it was going on eBay for about $11,000. Try not to scratch or break it!
+
 Apologies, this was supposed to be an awesome step-by-step on getting the robot to work with our amazing project, but we just didn't quite get there.  Hopefully everything we provided for you was enough to give you a head start and you can finish what we began.  
 
 
