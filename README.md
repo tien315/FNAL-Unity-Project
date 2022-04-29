@@ -121,7 +121,7 @@ This part includes the preparation and setup necessary to run a pick-and-place t
 
 ---
 
-### <a name="link-part-11">[Part 11: Connecting ROS to a real Robot](Documentation/10_ROS_real_robot.md)</a>
+### <a name="link-part-11">[Part 11: Connecting ROS to a real Robot](Documentation/11_ROS_real_robot.md)</a>
 
 <img src="Documentation/Gifs/0_demo.gif" width=400/>
 
