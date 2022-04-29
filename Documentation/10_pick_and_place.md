@@ -1,4 +1,4 @@
-# Object Pose Estimation Tutorial: Part 4
+# Pick and Place: Part 10
 
 In this part, we will use our trained deep learning model to predict the pose of the cube, and pick it up with our robot arm.  
 
