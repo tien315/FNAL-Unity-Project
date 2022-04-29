@@ -109,7 +109,7 @@ To measure the success of grasping in simulation using our pre-trained model for
 
 ### <a name="link-part-10">[Part 10: Pick-and-Place](Documentation/10_pick_and_place.md)</a>
 
-<img src="Documentation/pandpgif2.gif" width=400/>
+<img src="Documentation/Ppandpgif2.GIF" width=400/>
 
 
 This part includes the preparation and setup necessary to run a pick-and-place task using MoveIt. Here, the fin pose is predicted by the trained deep learning model. Steps covered include:
