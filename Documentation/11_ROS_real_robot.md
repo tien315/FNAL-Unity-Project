@@ -17,4 +17,4 @@ Apologies, this was supposed to be an awesome step-by-step on getting the robot 
 
 Good luck!
 
-Alan, Camila, CARLOS M, Diego, and Murad
+Alan, Camila, Carlos, Diego, and Murad
