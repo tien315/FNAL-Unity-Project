@@ -83,7 +83,7 @@ This part focuses on explaining the TrajectoryPlanner.cs script, which is the he
 This part focuses on giving a very basic explanation of how ROS works and the setup of the Docker container that will run it.
 
 ---
-### <a name="link-part-8">[Part 8: ROS Nodes in the ur3moveit Package](Documentation/7_ur3moveit.md)</a> 
+### <a name="link-part-8">[Part 8: ROS Nodes in the ur3moveit Package](Documentation/8_ur3moveit.md)</a> 
 
 <img src="Documentation/Images/0_data_collection_environment.png" width=400/>
 
