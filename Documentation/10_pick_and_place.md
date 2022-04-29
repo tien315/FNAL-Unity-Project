@@ -32,7 +32,7 @@ Here you have two options for the model:
 
 #### Option A: Use Our Pre-trained Model
 
-1. To save time, you may use the pretrained model.
+1. To save time, you may use the pretrained model.  Chack with Fermilab or your Senior Design Faculty Advisor. The model was too large to upload to GitHub.
 
 #### Option B: Use Your Own Model
 
