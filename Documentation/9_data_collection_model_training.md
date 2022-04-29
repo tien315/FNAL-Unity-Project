@@ -8,7 +8,7 @@ In [Part 2](2_set_up_the_data_collection_scene.md) of the tutorial, we learned:
 * How to create your own Randomizer 
 * How to add our custom Randomizer  
 
-In this part, we will be collecting a large dataset of RGB images of the Scene, and the corresponding pose of the cube. We will then use this data to train a machine learning model to predict the cube's position and rotation from images taken by our camera. We will then be ready to use the trained model for our pick-and-place task in [Part 4](4_pick_and_place.md).
+In this part, we will be collecting a large dataset of RGB images of the Scene, and the corresponding pose of the cube. We will then use this data to train a machine learning model to predict the cube's position and rotation from images taken by our camera. We will then be ready to use the trained model for our pick-and-place task in [Part 10](10_pick_and_place.md).
 
 Steps included in this part of the tutorial:
 
@@ -64,7 +64,7 @@ Now we need to collect the validation dataset.
 ## <a name="step-2">Train the Deep Learning Model</a>
 Now it's time to train our deep learning model! We've provided the model training code for you, but if you'd like to learn more about it - or make your own changes - you can dig into the details [here](../Model).
 
-This step can take a long time if your computer doesn't have GPU support (~5 days on CPU). Even with a GPU, it can take around ~10 hours. We have provided an already trained model as an alternative to waiting for training to complete. If you would like to use this provided model, you can proceed to [Part 4](4_pick_and_place.md).
+This step can take a long time if your computer doesn't have GPU support (~5 days on CPU). Even with a GPU, it can take around ~10 hours. We have provided an already trained model as an alternative to waiting for training to complete. If you would like to use this provided model, you can proceed to [Part 10](10_pick_and_place.md).
 
 1. Navigate to the `Robotics-Object-Pose-Estimation/Model` directory.
 
@@ -149,8 +149,5 @@ python -m pose_estimation.cli evaluate
 ### Exercises for the Reader
 **Optional**: If you would like to learn more about Randomizers and apply domain randomization to this scene more thoroughly, check out our further exercises for the reader [here](5_more_randomizers.md).
 
-### Proceed to [Part 4](4_pick_and_place.md).
+### Proceed to [Part 10](10_pick_and_place.md).
 
-### 
-
-### Go back to [Part 2](2_set_up_the_data_collection_scene.md)
