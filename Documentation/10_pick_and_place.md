@@ -32,11 +32,11 @@ Here you have two options for the model:
 
 #### Option A: Use Our Pre-trained Model
 
-1. To save time, you may use the model we have trained. Download this [UR3_single_cube_model.tar](https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation/releases/download/v0.0.1/UR3_single_cube_model.tar) file, which contains the pre-trained model weights.
+1. To save time, you may use the pretrained model.
 
 #### Option B: Use Your Own Model
 
-2. You can also use the model you have trained in [Part 3](3_data_collection_model_training.md). However, be sure to rename your model to `UR3_single_cube_model.tar` as the script that will call the model is expecting this name.
+2. You can also use the model you have trained in [Part 9](9_data_collection_model_training.md). However, be sure to rename your model to `UR3_single_cube_model.tar` as the script that will call the model is expecting this name.
 
 #### Moving the Model to the ROS Folder
 
@@ -118,7 +118,7 @@ Opening the ROS Settings window creates a `ROSConnectionPrefab` asset in the `As
 
 >Note: While using the ROS Settings window is the suggested workflow, you may still manually create a GameObject with an attached `ROSConnection` component.
 
-The provided script `Assets/TutorialAssets/Scripts/TrajectoryPlanner.cs` contains the logic to invoke the motion planning services, as well as the logic to control the gripper and end effector tool. This has been adapted from the [Pick-and-Place tutorial](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/pick_and_place/3_pick_and_place.md). The component has been added to the `ROSObjects/Publisher` object.
+The provided script `Assets/TutorialAssets/Scripts/TrajectoryPlanner.cs` contains the logic to invoke the motion planning services, as well as the logic to control the gripper and end effector tool. This has been adapted from the [Pick-and-Place tutorial](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/pick_and_place/1_pick_and_place.md). The component has been added to the `ROSObjects/Publisher` object.
 
 In this `TrajectoryPlanner` script, there are two functions that are defined, but not yet implemented. `InvokePoseEstimationService()` and `PoseEstimationCallback()` will create a [ROS Service](http://wiki.ros.org/Services) request and manage the ROS Service response, respectively. The following steps will provide the code and explanations for these functions.
 
@@ -231,4 +231,4 @@ You should see the following:
 </p>
 
 **Congrats! You did it!**
-### Click here to go back to [Part 3](3_data_collection_model_training.md).
+### Click here to go to [Part 11](11_ROS_with_real_robot.md).
