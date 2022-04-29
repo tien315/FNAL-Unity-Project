@@ -123,7 +123,7 @@ This part includes the preparation and setup necessary to run a pick-and-place t
 
 ### <a name="link-part-11">[Part 11: Connecting ROS to a real Robot](Documentation/11_ROS_real_robot.md)</a>
 
-<img src="Documentation/Gifs/0_demo.gif" width=400/>
+<img src="Documentation/Produce.gif" width=400/>
 
 
 This part will explain how to connect what we have done to an actual UR3e and move from simulation into the real world.
