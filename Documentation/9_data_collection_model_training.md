@@ -1,12 +1,4 @@
-# Object Pose Estimation Tutorial: Part 3
-
-In [Part 1](1_set_up_the_scene.md) of the tutorial, we learned how to create our Scene in Unity Editor.
-
-In [Part 2](2_set_up_the_data_collection_scene.md) of the tutorial, we learned:
-* How to equip the camera for the data collection
-* How to set up labelling and label configurations
-* How to create your own Randomizer 
-* How to add our custom Randomizer  
+# Training a Model after Data Collection
 
 In this part, we will be collecting a large dataset of RGB images of the Scene, and the corresponding pose of the cube. We will then use this data to train a machine learning model to predict the cube's position and rotation from images taken by our camera. We will then be ready to use the trained model for our pick-and-place task in [Part 10](10_pick_and_place.md).
 
