@@ -1,4 +1,4 @@
-MIE Senior Design Team 41
+MIE Senior Design Team 41 (2021/2022)
 
 University of Illinois at Chicago
 
