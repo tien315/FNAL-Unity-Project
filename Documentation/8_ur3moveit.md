@@ -321,4 +321,4 @@ if __name__ == "__main__":
     moveit_server()
 ```
 
-### Proceed to [Part 9](9_data_collection.md).
+### Proceed to [Part 9](9_data_collection_model_training.md).
